@@ -1,0 +1,190 @@
+{
+    "score": {
+      "total": 85,
+      "spf": 20,
+      "dkim": 25,
+      "dmarc": 30,
+      "details": {
+        "spf_exists": 10,
+        "spf_syntax": 5,
+        "spf_all": 0,
+        "spf_no_plusall": 5,
+        "dkim_exists": 15,
+        "dkim_key_strength": 10,
+        "dkim_multiple_selectors_bonus": 5,
+        "dmarc_exists": 10,
+        "dmarc_policy": 20,
+        "dmarc_rua_bonus": 5
+      },
+      "reasons": {
+        "spf": "SPF record does not specify an \"all\" mechanism.",
+        "dkim": "Multiple DKIM selectors detected (key rotation enabled).",
+        "dmarc": "DMARC reporting (rua) is enabled."
+      },
+      "recommendations": {
+        "spf": "Add an \"all\" mechanism (preferably \"-all\") to define policy for all mail sources.",
+        "dkim": "No change needed. Key rotation is a best practice.",
+        "dmarc": "No change needed. Reporting is recommended."
+      }
+    },
+    "spf": {
+      "valid": true,
+      "record": "v=spf1 redirect=gene.com.hosted.spf-report.com",
+      "details": {
+        "dnsLookupCount": 2,
+        "includes": [],
+        "redirects": [
+          "gene.com.hosted.spf-report.com",
+          "[gene.com.hosted.spf-report.com]: v=spf1 include:gene_com_7566a790_0.flat.spf-report.com -all"
+        ],
+        "allMechanisms": [
+          "redirect=gene.com.hosted.spf-report.com",
+          "all:~all"
+        ],
+        "warnings": [],
+        "errors": []
+      }
+    },
+    "dkim": {
+      "valid": true,
+      "selectors": [
+        {
+          "selector": "k2",
+          "domain": "gene.com",
+          "valid": true,
+          "record": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2aC2KjGKLOwTweBY5A9RpjsxaBXR9r7OAU6U8/zn92ivImI75naUujWbItRI/QmL1jy5PWGqLwoUA0b90ObWaLDc+i9MtTNmGeWO009hr20fIxhGg6XBT2kjZ1DTThopSe1nAndsupmcBwlQ5Q6LJ+ZAxLcujnPIxM0ZBLmgpkv8u6RfY4eFP8OLvdAW3oSuB0DyLDigQX4Sj8wBO4YIdQH6AAmBeOsidsKAFNFUCpc3vCxtBDR12U+cBg724l3sBkMQ8evnz6idnqxq9QAVYh8k4kJ+RP+6cqTdy7LjIm8xY/bQNpQIpGUAuDo2DjLcCDun9DAI4Q/3z+Q0o9QuQIDAQAB;"
+        },
+        {
+          "selector": "default",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "google",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "selector1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "selector2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "k1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found"
+        },
+        {
+          "selector": "mx",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "dkim",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "s1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found"
+        },
+        {
+          "selector": "s2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found"
+        },
+        {
+          "selector": "mx1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "mx2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "fm1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "fm2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "protonmail",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "everlytickey1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "everlytickey2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "mail",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "mail1",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        },
+        {
+          "selector": "mail2",
+          "domain": "gene.com",
+          "valid": false,
+          "error": "No DKIM record found (NXDOMAIN)"
+        }
+      ],
+      "selector": "k2",
+      "record": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv2aC2KjGKLOwTweBY5A9RpjsxaBXR9r7OAU6U8/zn92ivImI75naUujWbItRI/QmL1jy5PWGqLwoUA0b90ObWaLDc+i9MtTNmGeWO009hr20fIxhGg6XBT2kjZ1DTThopSe1nAndsupmcBwlQ5Q6LJ+ZAxLcujnPIxM0ZBLmgpkv8u6RfY4eFP8OLvdAW3oSuB0DyLDigQX4Sj8wBO4YIdQH6AAmBeOsidsKAFNFUCpc3vCxtBDR12U+cBg724l3sBkMQ8evnz6idnqxq9QAVYh8k4kJ+RP+6cqTdy7LjIm8xY/bQNpQIpGUAuDo2DjLcCDun9DAI4Q/3z+Q0o9QuQIDAQAB;"
+    },
+    "dmarc": {
+      "valid": true,
+      "record": "v=DMARC1; p=reject; sp=quarantine; rua=mailto:8f5c056d@mxtoolbox.dmarc-report.com,mailto:dmarc@ayba8dhs.uriports.com; ruf=mailto:8f5c056d@forensics.dmarc-report.com,mailto:dmarc@ayba8dhs.uriports.com; fo=1; pct=100",
+      "policy": "reject"
+    },
+    "mtaSts": {
+      "valid": true,
+      "mode": "none"
+    },
+    "tlsRpt": {
+      "valid": true,
+      "rua": [
+        "mailto:tlsrpt@ayba8dhs.uriports.com"
+      ]
+    }
+  }
