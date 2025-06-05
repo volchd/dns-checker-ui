@@ -1,7 +1,12 @@
 import React from "react";
 import './Dashboard.css';
+import type { Score } from './App';
 
-export default function Dashboard({ score }) {
+interface DashboardProps {
+  score: Score | null;
+}
+
+export default function Dashboard({ score }: DashboardProps) {
   if (!score) return null;
 
   return (
