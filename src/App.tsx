@@ -63,7 +63,7 @@ function App(): JSX.Element {
 
   return (
     <div className="app-container">
-      <h1>DNS Checker UI</h1>
+      <h1>DNS Checker</h1>
       <form className="domain-form" onSubmit={handleScan}>
         <input
           type="text"
