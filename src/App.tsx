@@ -1,4 +1,5 @@
-import React, { FormEvent, useState } from 'react';
+import React, { JSX } from 'react';
+import { FormEvent, useState } from 'react';
 import Dashboard from './Dashboard';
 import './App.css';
 
@@ -19,6 +20,7 @@ export type Score = {
   };
   details: Record<string, string>;
 };
+
 
 function App(): JSX.Element {
   const [domain, setDomain] = useState<string>('');
